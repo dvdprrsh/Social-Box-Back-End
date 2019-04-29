@@ -28,7 +28,6 @@ def register():
     # Return a success message with the new API Key
     return jsonify({"ok": True, "api_key": api_key})
 
-
 @app.route("/api/login", methods=['POST'])
 def login():
     """Endpoint to login users."""
@@ -105,7 +104,6 @@ def get_friends():
     if not api_key:
         return jsonify({"ok": False, "message": "API Key must be provided."})
 
-
     # Gets the user with the supplied API Key
     user = database.verify_api_key(api_key)
 
@@ -121,7 +119,6 @@ def get_friends():
             'username': user,
             'scores': database.get_user_scores(user)
         }
-
         friends.append(friend)
 
     return jsonify(dict({"ok": True, 'friends': friends}))
