@@ -1,0 +1,11 @@
+dateparser==0.7.1
+Flask==1.0.2
+Flask-PyMongo==2.2.0
+geocoder==1.38.1
+geopy==1.19.0
+humanize==0.5.1
+maya==0.6.1
+passlib==1.7.1
+Pint==0.9
+pymongo==3.7.2
+suntime==1.2.1
